@@ -1,0 +1,11 @@
+output: main.o thread_pool.o
+	gcc -o output main.o thread_pool.o
+
+main.o: main.c
+	gcc -c main.c
+
+thread_pool.o: thread_pool.c thread_pool.h
+	gcc -c thread_pool.c
+
+clean:
+	rm main.o thread_pool.o output
